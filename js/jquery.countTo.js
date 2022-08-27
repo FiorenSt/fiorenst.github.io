@@ -117,17 +117,17 @@ const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay)) * 3;
     return value.toFixed(options.decimals);
   }
 
-  $.fn.countTo = function (option) {
+  $.fn.CountTo = function (option) {
     return this.each(function () {
       var $this   = $(this);
-      var data    = $this.data('countTo');
+      var data    = $this.data('CountTo');
       var init    = !data || typeof(option) === 'object';
       var options = typeof(option) === 'object' ? option : {};
       var method  = typeof(option) === 'string' ? option : 'start';
 
       if (init) {
         if (data) data.stop();
-        $this.data('countTo', data = new CountTo(this, options));
+        $this.data('CountTo', data = new CountTo(this, options));
       }
 
       data[method].call(data);
