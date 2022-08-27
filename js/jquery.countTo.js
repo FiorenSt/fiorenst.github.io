@@ -19,7 +19,7 @@
 
 const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
 const firstDate = new Date();
-const secondDate = new Date(2022, 1, 1);
+const secondDate = new Date(2019, 8, 15);
 const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay)) * 3;
 
   CountTo.DEFAULTS = {
