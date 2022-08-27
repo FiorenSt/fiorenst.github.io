@@ -16,7 +16,6 @@
     this.init();
   };
 
-
 const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
 const firstDate = new Date();
 const secondDate = new Date("2019-8-15");
@@ -24,7 +23,7 @@ const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay)) * 3;
 
   CountTo.DEFAULTS = {
     from: 0,               // the number the element should start at
-    to: diffDays,          // the number the element should end at
+    to: diffDays,                 // the number the element should end at
     speed: 1000,           // how long it should take to count between the target numbers
     refreshInterval: 100,  // how often the element should be updated
     decimals: 0,           // the number of decimal places to show
@@ -117,17 +116,17 @@ const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay)) * 3;
     return value.toFixed(options.decimals);
   }
 
-  $.fn.CountTo = function (option) {
+  $.fn.countTo = function (option) {
     return this.each(function () {
       var $this   = $(this);
-      var data    = $this.data('CountTo');
+      var data    = $this.data('countTo');
       var init    = !data || typeof(option) === 'object';
       var options = typeof(option) === 'object' ? option : {};
       var method  = typeof(option) === 'string' ? option : 'start';
 
       if (init) {
         if (data) data.stop();
-        $this.data('CountTo', data = new CountTo(this, options));
+        $this.data('countTo', data = new CountTo(this, options));
       }
 
       data[method].call(data);
