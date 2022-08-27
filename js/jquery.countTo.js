@@ -24,7 +24,7 @@ const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
 
   CountTo.DEFAULTS = {
     from: 0,               // the number the element should start at
-    to: diffDays,                 // the number the element should end at
+    to: diffDays*3,                 // the number the element should end at
     speed: 1000,           // how long it should take to count between the target numbers
     refreshInterval: 100,  // how often the element should be updated
     decimals: 0,           // the number of decimal places to show
