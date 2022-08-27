@@ -18,13 +18,13 @@
 
 
 const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-const firstDate = new Date(2022, 1, 1);
-const secondDate = new Date();
-const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
+const firstDate = new Date();
+const secondDate = new Date(2022, 1, 1);
+const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay)) * 3;
 
   CountTo.DEFAULTS = {
     from: 0,               // the number the element should start at
-    to: diffDays*3,                 // the number the element should end at
+    to: diffDays,                 // the number the element should end at
     speed: 1000,           // how long it should take to count between the target numbers
     refreshInterval: 100,  // how often the element should be updated
     decimals: 0,           // the number of decimal places to show
