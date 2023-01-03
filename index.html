@@ -210,6 +210,23 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 				</div>
 			</div>
 
+			<div class="col-md-3 text-center animate-box">
+				<!-- Display the number of page views using Google Analytics -->
+				<span class="colorlib-counter js-counter">
+					<!-- This script element will be replaced with the page view count when the page loads -->
+					<script>
+						// Retrieve the page view count from Google Analytics
+						ga(function(tracker) {
+							var numPageViews = tracker.get('totalEvents');
+							document.write(numPageViews);
+						});
+					</script>
+				</span>
+				<span class="colorlib-counter-label">Views</span>
+			</div>		
+			
+
+			
 
 			<section class="colorlib-skills" data-section="skills">
 				<div class="colorlib-narrow-content">
