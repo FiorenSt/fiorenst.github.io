@@ -48,7 +48,7 @@ figure {
     font-size: 16px;
     width: 80%;
     margin: 20px auto 0px auto;
-    color: #b3b3b3;
+    color: #8a0101;
     font-style: italic;
     font-family: "Quicksand", Arial, sans-serif; }
     @media screen and (max-width: 480px) {
@@ -56,7 +56,7 @@ figure {
         width: 100%; } }
 
 ::-webkit-selection {
-  color: #fff;
+  color: rgb(190, 18, 18);
   background: #2c98f0; }
 
 ::-moz-selection {
